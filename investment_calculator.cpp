@@ -31,7 +31,7 @@ double InvestmentCalculator::getDoubleFromUser(string prompt)
 
 		if (!ok)
 		{
-			cout << "Invalid input. Try again.\n";
+			cout << "Invalid input. Try again.\n" + prompt;
 		}
 	} while (!ok);
 
@@ -68,7 +68,7 @@ int InvestmentCalculator::getIntFromUser(string prompt)
 
 		if (!ok)
 		{
-			cout << "Invalid input. Try again.\n";
+			cout << "Invalid input. Try again.\n" + prompt;
 		}
 	} while (!ok);
 
@@ -77,22 +77,22 @@ int InvestmentCalculator::getIntFromUser(string prompt)
 
 void InvestmentCalculator::getInitialInvestment()
 {
-	m_initInvestment = getDoubleFromUser("Initial Investment Amount: $\n");
+	m_initInvestment = getDoubleFromUser("\nInitial Investment Amount: $");
 }
 
 void InvestmentCalculator::getMonthlyDeposit()
 {
-	m_monthlyDeposit = getDoubleFromUser("Monthly Deposit: $\n");
+	m_monthlyDeposit = getDoubleFromUser("\nMonthly Deposit: $");
 }
 
 void InvestmentCalculator::getAnnualPercentageRate()
 {
-	m_annualPercentageRate = getDoubleFromUser("Annual Percentage Rate: %\n");
+	m_annualPercentageRate = getDoubleFromUser("\nAnnual Percentage Rate: %");
 }
 
 void InvestmentCalculator::getNumberOfYears()
 {
-	m_numYears = getIntFromUser("Number of years: \n");
+	m_numYears = getIntFromUser("\nNumber of years: ");
 }
 
 int InvestmentCalculator::userInput() {					// investment function defined
